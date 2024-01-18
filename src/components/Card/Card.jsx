@@ -4,10 +4,15 @@ import { Link } from "react-router-dom";
 const Card = (props) => {
   return (
     <div>
-      <div className="card w-72 hover:shadow-md hover:shadow-blue-400/40 duration-300 cursor-pointer bg-base-100 shadow-xl">
+      <div className="card md:w-96 lg:w-72 w-[22rem] my-4 md:my-0 hover:shadow-md hover:shadow-blue-400/40 duration-300 cursor-pointer bg-base-100 shadow-xl">
         <Link to={`/product/${props.id}`}>
           <figure className=" ">
-            <img className="rounded-t-md " src={props.image} alt="Shoes" />
+            <img
+              onClick={window.scrollTo(0, 0)}
+              className="rounded-t-md  scroll-smooth"
+              src={props.image}
+              alt="Shoes"
+            />
           </figure>
         </Link>
         <div className="card-body">

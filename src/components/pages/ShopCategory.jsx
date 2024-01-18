@@ -59,17 +59,15 @@ const ShopCategory = (props) => {
   return (
     <div className="">
       <figure>
-        <img className="px-7" src={props.banner} alt="banner" />
+        <img className="md:px-7" src={props.banner} alt="banner" />
       </figure>
-      <div className="flex gap-4 justify-end w-full px-7">
+      <div className="flex gap-4 justify-center md:justify-end w-full md:px-7">
         <select
           onChange={(e) => handleFilterPrice(e.target.value)}
           value={selectedFilter}
           className="select my-2 select-bordered  max-w-xs"
         >
-          <option value="" selected>
-            Sort by Price
-          </option>
+          <option value="">Sort by Price</option>
           <option value="1">Rp.50.000 - Rp.100.000</option>
           <option value="2">Rp.100.000 - Rp.150.000</option>
           <option value="3">Rp.150.000 - Rp.200.000</option>
@@ -80,7 +78,7 @@ const ShopCategory = (props) => {
           Clear
         </button>
       </div>
-      <div className="grid md:grid-cols-4 px-7 mt-4 gap-2">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 justify-center md:px-3 gap-2">
         {dataFilter.length >= 1 ? (
           dataFilter.slice(0, visible).map((data) => {
             return (

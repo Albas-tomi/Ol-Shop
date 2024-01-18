@@ -3,9 +3,9 @@ import dataProduct from "../../assets/image/data";
 import Card from "../Card/Card";
 const Popular = () => {
   return (
-    <div className="px-3">
+    <div className="px-7">
       <h1 className="md:text-2xl font-semibold">Popular Collection</h1>
-      <div className="grid md:grid-cols-4 px-3 gap-2">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 justify-center md:px-3 gap-2">
         {dataProduct.map((data) => (
           <Card
             key={data.id}
